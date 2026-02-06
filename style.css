@@ -15,20 +15,23 @@
     color: hsl(228, 45%, 44%);
 }
 
+
 /* Base → Mobile (hasta 375px aprox) */
 body {
     font-size: 15px;
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
-    background-color: hsl(212, 45%, 89%);
+}
 
+main {
+    background-color: hsl(212, 45%, 89%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.main {
+.card {
     background: hsl(0, 0%, 100%);
     margin: 0 20px;
     display: flex;
