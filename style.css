@@ -1,32 +1,31 @@
-/* font Google */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    display: block;
+:root {
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Slate300: hsl(212, 45%, 89%);
+    --clr-Slate500: hsl(216, 15%, 48%);
+    --clr-Slate900: hsl(218, 44%, 22%);
+
+    --fs-body: 15px;
+    --fs-body-mobil: 16px;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-
-/* Base → Mobile (hasta 375px aprox) */
 body {
-    font-size: 15px;
+    font-size: var(--fs-body);
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
 }
 
 main {
-    background-color: hsl(212, 45%, 89%);
+    background-color: var(--clr-Slate300);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +33,7 @@ main {
 }
 
 .card {
-    background: hsl(0, 0%, 100%);
+    background: var(--clr-White);
     margin: 0 20px;
     display: flex;
     flex-direction: column;
@@ -46,13 +45,12 @@ main {
 }
 
 .img-qr {
-    width: 255px;
-    height: 255px;
+    width: 89%;
     border-radius: 10px;
 }
 
 .title {
-    color: hsl(218, 44%, 22%);
+    color: var(--clr-Slate900);
     font-size: 1.3em;
     font-weight: 700;
     margin-bottom: 10px;
@@ -63,16 +61,26 @@ main {
 .description {
     font-size: .95em;
     font-weight: inherit;
-    color: hsl(216, 15%, 48%);
+    color: var(--clr-Slate500);
     margin-top: 0;
     margin-bottom: 40px;
     width: 245px;
 }
 
-/* Desktop */
-@media (min-width: 1440px) {
+@media (min-width: 96rem) {
     body {
-        font-size: 16px;
-        background-color: hsl(212, 45%, 89%);
+        font-size: var(--fs-body-mobil);
+        background-color: var(--clr-Slate300);
     }
 }
+
+/* 
+.attribution {
+    font-size: 1.36rem;
+    text-align: center;
+    display: block;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+} */
